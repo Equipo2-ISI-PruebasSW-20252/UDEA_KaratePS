@@ -102,3 +102,112 @@ classpath:org/udea/parabank/login.feature:12
 1 < CF-RAY: 9925543e9b7d31f2-MIA
 Successfully transferred $195 from account #54321 to account #15675
 
+21:07:08.959 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: org/udea/parabank/TransferFunds.feature - mismatched input '"' expecting <EOF>
+21:26:20.197 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:26:21.624 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=75&fromAccountId=54321&toAccountId=15675
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:26:24.121 [main] DEBUG com.intuit.karate - response time in milliseconds: 2496
+1 < 200
+1 < Date: Wed, 22 Oct 2025 02:26:23 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99258cb0890b2af6-MIA
+Successfully transferred $75 from account #54321 to account #15675
+
+21:26:24.154 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=21&fromAccountId=48099&toAccountId=70350
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:26:24.610 [main] DEBUG com.intuit.karate - response time in milliseconds: 456
+1 < 400
+1 < Date: Wed, 22 Oct 2025 02:26:24 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99258cb5efd5f498-MIA
+Could not find account number 48099 and/or 70350
+
+21:26:53.689 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:26:55.091 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=103&fromAccountId=54321&toAccountId=15675
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:26:55.676 [main] DEBUG com.intuit.karate - response time in milliseconds: 584
+1 < 200
+1 < Date: Wed, 22 Oct 2025 02:26:55 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99258d77feba1f08-MIA
+Successfully transferred $103 from account #54321 to account #15675
+
+21:26:55.717 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=74&fromAccountId=64685&toAccountId=74438
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:26:56.424 [main] DEBUG com.intuit.karate - response time in milliseconds: 707
+1 < 400
+1 < Date: Wed, 22 Oct 2025 02:26:56 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99258d7cda8b45f2-MIA
+Could not find account number 64685 and/or 74438
+
+21:26:57.177 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:26:57.184 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:26:57.653 [main] DEBUG com.intuit.karate - response time in milliseconds: 469
+1 < 200
+1 < Date: Wed, 22 Oct 2025 02:26:57 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99258d846a673340-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
