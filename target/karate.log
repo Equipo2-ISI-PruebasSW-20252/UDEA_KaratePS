@@ -1,0 +1,104 @@
+20:26:50.640 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:26:52.043 [main] DEBUG com.intuit.karate - request:
+1 > GET http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: 192.168.0.182:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:26:57.071 [main] ERROR com.intuit.karate - org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: connect timed out, http call failed after 5389 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+20:26:57.072 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:12
+When method GET
+http call failed after 5389 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+classpath:org/udea/parabank/login.feature:12
+20:30:07.297 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:30:08.757 [main] DEBUG com.intuit.karate - request:
+1 > GET http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: 192.168.0.182:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:30:08.967 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:30:10.312 [main] DEBUG com.intuit.karate - request:
+1 > GET http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: 192.168.0.182:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:30:13.782 [main] ERROR com.intuit.karate - org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: connect timed out, http call failed after 5565 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+20:30:13.782 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:12
+When method GET
+http call failed after 5565 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+classpath:org/udea/parabank/login.feature:12
+20:30:15.335 [main] ERROR com.intuit.karate - org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: connect timed out, http call failed after 5511 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+20:30:15.335 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:12
+When method GET
+http call failed after 5511 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+classpath:org/udea/parabank/login.feature:12
+20:30:26.870 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:30:28.220 [main] DEBUG com.intuit.karate - request:
+1 > GET http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: 192.168.0.182:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:30:33.237 [main] ERROR com.intuit.karate - org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: connect timed out, http call failed after 5509 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+20:30:33.237 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:12
+When method GET
+http call failed after 5509 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+classpath:org/udea/parabank/login.feature:12
+20:32:24.054 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:32:25.595 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:32:26.478 [main] DEBUG com.intuit.karate - response time in milliseconds: 880
+1 < 200
+1 < Date: Wed, 22 Oct 2025 01:32:26 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99253da79a1ea528-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+20:47:49.602 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:47:51.039 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=195&fromAccountId=54321&toAccountId=15675
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:47:51.885 [main] DEBUG com.intuit.karate - response time in milliseconds: 845
+1 < 200
+1 < Date: Wed, 22 Oct 2025 01:47:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9925543e9b7d31f2-MIA
+Successfully transferred $195 from account #54321 to account #15675
+
