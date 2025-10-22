@@ -7,7 +7,7 @@ Feature: Transfer Funds in Parabank
     * def val_fromAccountId = '54321'
     * def val_toAccountId = '15675'
     * def fakeObj = new faker()
-    * def val_amount = fakeObj.number().numberBetween(1, 200)
+    * def val_amount = fakeObj.number().numberBetween(1, 100)
 
   Scenario: Successful Transfer
     Given path 'transfer'
