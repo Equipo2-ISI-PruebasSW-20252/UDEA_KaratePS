@@ -211,3 +211,432 @@ Could not find account number 64685 and/or 74438
 1 < CF-RAY: 99258d846a673340-MIA
 {"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
 
+14:10:32.715 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:10:34.172 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.5)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:10:34.954 [main] DEBUG com.intuit.karate - response time in milliseconds: 779
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:10:33 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c41249e7b6d1f-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:10:35.078 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:34
+And parh 'WrongPassword'
+no step-definition method match found for: parh 'WrongPassword'
+classpath:org/udea/parabank/login.feature:34
+14:11:09.942 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:11:11.942 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:11:12.757 [main] DEBUG com.intuit.karate - response time in milliseconds: 811
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:11:11 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c4210a83ecc76-TPA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:11:12.844 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:34
+And parh 'WrongPassword'
+no step-definition method match found for: parh 'WrongPassword'
+classpath:org/udea/parabank/login.feature:34
+14:11:34.584 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:11:36.209 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:11:36.721 [main] DEBUG com.intuit.karate - response time in milliseconds: 509
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:11:35 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c42a78ac3c82c-TPA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:11:36.811 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:34
+And parh 'WrongPassword'
+no step-definition method match found for: parh 'WrongPassword'
+classpath:org/udea/parabank/login.feature:34
+14:12:13.827 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:12:15.489 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:12:16.113 [main] DEBUG com.intuit.karate - response time in milliseconds: 622
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:12:15 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c439ceea728b2-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:12:16.193 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/invalidUserName/WrongPassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:12:16.660 [main] DEBUG com.intuit.karate - response time in milliseconds: 467
+1 < 400
+1 < Date: Sun, 26 Oct 2025 19:12:15 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c43a06a4e37a4-MIA
+Invalid username and/or password
+
+14:13:01.749 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:13:03.060 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.5)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:13:03.861 [main] DEBUG com.intuit.karate - response time in milliseconds: 799
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:13:02 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c44c74899eeeb-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:13:03.972 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/invalidUserName/WrongPassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.5)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:13:04.486 [main] DEBUG com.intuit.karate - response time in milliseconds: 514
+1 < 400
+1 < Date: Sun, 26 Oct 2025 19:13:03 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c44cb1bdfcc79-TPA
+Invalid username and/or password
+
+14:14:29.959 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:14:31.681 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:14:32.332 [main] DEBUG com.intuit.karate - response time in milliseconds: 649
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:14:31 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c46f039c9747e-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:14:32.412 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/invalidUserName/WrongPassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:14:32.924 [main] DEBUG com.intuit.karate - response time in milliseconds: 512
+1 < 400
+1 < Date: Sun, 26 Oct 2025 19:14:31 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c46f3dee38b48-TPA
+Invalid username and/or password
+
+14:14:32.940 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login//
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:14:33.312 [main] DEBUG com.intuit.karate - response time in milliseconds: 372
+1 < 404
+1 < Date: Sun, 26 Oct 2025 19:14:32 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < allow: POST,GET,OPTIONS,HEAD
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c46f70e848d9d-MIA
+
+
+14:14:33.315 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:44
+Then status 403
+status code was: 404, expected: 403, response time in milliseconds: 372, url: https://parabank.parasoft.com/parabank/services/bank/login//, response: 
+
+classpath:org/udea/parabank/login.feature:44
+14:15:02.877 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:15:04.468 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:15:05.118 [main] DEBUG com.intuit.karate - response time in milliseconds: 646
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:15:04 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c47bd19402595-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:15:05.228 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/invalidUserName/WrongPassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:15:05.598 [main] DEBUG com.intuit.karate - response time in milliseconds: 370
+1 < 400
+1 < Date: Sun, 26 Oct 2025 19:15:04 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c47c10ecd0da2-TPA
+Invalid username and/or password
+
+14:15:05.627 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login//
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:15:06.088 [main] DEBUG com.intuit.karate - response time in milliseconds: 461
+1 < 404
+1 < Date: Sun, 26 Oct 2025 19:15:05 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < allow: POST,GET,OPTIONS,HEAD
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c47c35f890efd-MIA
+
+
+14:18:40.825 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:18:42.372 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:18:43.171 [main] DEBUG com.intuit.karate - response time in milliseconds: 796
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:18:42 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c4d0ffc33ff30-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:18:43.207 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:14
+And match responseTime < 2000
+no step-definition method match found for: match responseTime < 2000
+classpath:org/udea/parabank/login.feature:14
+14:18:43.239 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/invalidUserName/WrongPassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:18:43.585 [main] DEBUG com.intuit.karate - response time in milliseconds: 345
+1 < 400
+1 < Date: Sun, 26 Oct 2025 19:18:42 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c4d138deccc79-TPA
+Invalid username and/or password
+
+14:18:43.614 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login//
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:18:44.067 [main] DEBUG com.intuit.karate - response time in milliseconds: 453
+1 < 404
+1 < Date: Sun, 26 Oct 2025 19:18:43 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < allow: POST,GET,OPTIONS,HEAD
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c4d15bbbfadfa-MIA
+
+
+14:20:46.528 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:20:48.095 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:20:48.826 [main] DEBUG com.intuit.karate - response time in milliseconds: 729
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:20:47 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c50212b8bcc79-TPA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:20:48.906 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/invalidUserName/WrongPassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:20:49.260 [main] DEBUG com.intuit.karate - response time in milliseconds: 353
+1 < 400
+1 < Date: Sun, 26 Oct 2025 19:20:48 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c5024e9258b48-TPA
+Invalid username and/or password
+
+14:20:49.282 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login//
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:20:49.754 [main] DEBUG com.intuit.karate - response time in milliseconds: 471
+1 < 404
+1 < Date: Sun, 26 Oct 2025 19:20:48 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < allow: POST,GET,OPTIONS,HEAD
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c50272e967445-MIA
+
+

@@ -27,3 +27,18 @@ Feature: Login to Parabank
        "ssn": '#string'
     }
     """
+
+  Scenario: Customer Login with invalid credentials
+    Given path 'login'
+    And path 'invalidUserName'
+    And path 'WrongPassword'
+    When method GET
+    Then status 400
+    And match response == "Invalid username and/or password"
+
+  Scenario: Customer Login with empty credentials
+    Given path 'login'
+    And path ''
+    And path ''
+    When method GET
+    Then status 404
