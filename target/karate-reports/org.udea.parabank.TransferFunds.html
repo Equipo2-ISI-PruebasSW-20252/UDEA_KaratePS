@@ -40,7 +40,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     </a>
     <div class="nav-count">
       <div id="nav-pass" class="bg-success">2</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-fail" class="bg-danger">3</div>
     </div>
   </div>
   <div id="nav-env">
@@ -50,7 +50,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-10-21 09:26:56 PM</div>
+    <div>2025-10-26 04:04:44 PM</div>
   </div>
 </div>
 
@@ -59,7 +59,16 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
             <a href="#[1:16]"><span>[1:16]</span> <span>Successful Transfer</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[2:25]"><span>[2:25]</span> <span>Transfer Failed</span></a>
+            <a href="#[2:25]"><span>[2:25]</span> <span>Invalid Accounts</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3:35]"><span>[3:35]</span> <span>Insufficient Funds</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4:47]"><span>[4:47]</span> <span>Negative Amount</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5:59]"><span>[5:59]</span> <span>Same Account Transfer</span></a>
           </div>
         </div>
       </div>
@@ -85,7 +94,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1143</span>
+              <span>ms:</span>&nbsp;<span>1457</span>
             </div>
           </div>
           <div class="step-row">
@@ -101,11 +110,39 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:16]bg"><div>
+  
+
+  
+
+  <div class="step-row">
     <div class="step-container" id="0.6">
       <div class="step-ref bg-step">6</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url baseUrl</span>
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -133,10 +170,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">40</div>
   </div>
 
    
@@ -161,7 +198,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">8</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_fromAccountId = &#39;54321&#39;</span>
+        <span>*</span>&nbsp;<span>def val_fromAccountId = &#39;12456&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -189,10 +226,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_toAccountId = &#39;15675&#39;</span>
+        <span>*</span>&nbsp;<span>def val_toAccountId = &#39;12345&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -217,10 +254,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">10</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
+        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(1, 200)</span>
       </div>
     </div>
-    <div class="time-cell passed">26</div>
+    <div class="time-cell passed">9</div>
   </div>
 
    
@@ -245,10 +282,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">11</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(1, 200)</span>
+        <span>*</span>&nbsp;<span>def val_fromAccountId_error = fakerObj.number().randomNumber(5, true)</span>
       </div>
     </div>
-    <div class="time-cell passed">7</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -273,10 +310,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">12</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_fromAccountId_error = fakerObj.number().randomNumber(5, true)</span>
+        <span>*</span>&nbsp;<span>def val_toAccountId_error = fakerObj.number().randomNumber(5, true)</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -301,7 +338,35 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">13</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_toAccountId_error = fakerObj.number().randomNumber(5, true)</span>
+        <span>*</span>&nbsp;<span>def high_amount = 9999999</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:16]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def negative_amount = -50</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -332,7 +397,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Given</span>&nbsp;<span>path &#39;transfer&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -416,7 +481,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>param amount = val_amount</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -444,7 +509,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">1090</div>
+    <div class="time-cell passed">1374</div>
   </div>
 
    
@@ -453,8 +518,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.21">21:26:55.091 request:
-1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=103&amp;fromAccountId=54321&amp;toAccountId=15675
+  <div class="preformatted" data-parent="0.21">16:04:41.992 request:
+1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=171&amp;fromAccountId=12456&amp;toAccountId=12345
 1 &gt; Accept: application/json
 1 &gt; Host: parabank.parasoft.com
 1 &gt; Connection: Keep-Alive
@@ -462,17 +527,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:26:55.678 response time in milliseconds: 584
+16:04:42.811 response time in milliseconds: 814
 1 &lt; 200
-1 &lt; Date: Wed, 22 Oct 2025 02:26:55 GMT
+1 &lt; Date: Sun, 26 Oct 2025 21:04:41 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 99258d77feba1f08-MIA
-Successfully transferred $103 from account #54321 to account #15675
+1 &lt; CF-RAY: 994ce85319980da2-TPA
+Successfully transferred $171 from account #12456 to account #12345
 
 </div>   
 
@@ -521,7 +586,7 @@ Successfully transferred $103 from account #54321 to account #15675
         <span>And</span>&nbsp;<span>match response == &quot;Successfully transferred $&quot;+ val_amount+&quot; from account #&quot;+val_fromAccountId+&quot; to account #&quot;+val_toAccountId</span>
       </div>
     </div>
-    <div class="time-cell passed">10</div>
+    <div class="time-cell passed">22</div>
   </div>
 
    
@@ -545,12 +610,12 @@ Successfully transferred $103 from account #54321 to account #15675
               </div>
               <div class="scenario-keyword">
                 Scenario: <span>[2:25]</span>
-                <span class="scenario-name">Transfer Failed</span>
+                <span class="scenario-name">Invalid Accounts</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>721</span>
+              <span>ms:</span>&nbsp;<span>485</span>
             </div>
           </div>
           <div class="step-row">
@@ -566,8 +631,8 @@ Successfully transferred $103 from account #54321 to account #15675
   
 
   <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>url baseUrl</span>
@@ -594,8 +659,8 @@ Successfully transferred $103 from account #54321 to account #15675
   
 
   <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref bg-step">7</div>
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
@@ -622,11 +687,39 @@ Successfully transferred $103 from account #54321 to account #15675
   
 
   <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:25]bg"><div>
+  
+
+  
+
+  <div class="step-row">
     <div class="step-container" id="0.8">
       <div class="step-ref bg-step">8</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_fromAccountId = &#39;54321&#39;</span>
+        <span>*</span>&nbsp;<span>def val_fromAccountId = &#39;12456&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -654,7 +747,7 @@ Successfully transferred $103 from account #54321 to account #15675
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_toAccountId = &#39;15675&#39;</span>
+        <span>*</span>&nbsp;<span>def val_toAccountId = &#39;12345&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -682,7 +775,7 @@ Successfully transferred $103 from account #54321 to account #15675
       <div class="step-ref bg-step">10</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
+        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(1, 200)</span>
       </div>
     </div>
     <div class="time-cell passed">2</div>
@@ -710,34 +803,6 @@ Successfully transferred $103 from account #54321 to account #15675
       <div class="step-ref bg-step">11</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(1, 200)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:25]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref bg-step">12</div>
-      
-      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def val_fromAccountId_error = fakerObj.number().randomNumber(5, true)</span>
       </div>
     </div>
@@ -762,14 +827,70 @@ Successfully transferred $103 from account #54321 to account #15675
   
 
   <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref bg-step">13</div>
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def val_toAccountId_error = fakerObj.number().randomNumber(5, true)</span>
       </div>
     </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:25]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def high_amount = 9999999</span>
+      </div>
+    </div>
     <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:25]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def negative_amount = -50</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -797,7 +918,7 @@ Successfully transferred $103 from account #54321 to account #15675
         <span>Given</span>&nbsp;<span>path &#39;transfer&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -825,7 +946,7 @@ Successfully transferred $103 from account #54321 to account #15675
         <span>And</span>&nbsp;<span>param fromAccountId = val_fromAccountId_error</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -909,7 +1030,7 @@ Successfully transferred $103 from account #54321 to account #15675
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">710</div>
+    <div class="time-cell passed">470</div>
   </div>
 
    
@@ -918,8 +1039,8 @@ Successfully transferred $103 from account #54321 to account #15675
 
   
 
-  <div class="preformatted" data-parent="0.30">21:26:55.717 request:
-1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=74&amp;fromAccountId=64685&amp;toAccountId=74438
+  <div class="preformatted" data-parent="0.30">16:04:42.878 request:
+1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=125&amp;fromAccountId=98275&amp;toAccountId=31872
 1 &gt; Accept: application/json
 1 &gt; Host: parabank.parasoft.com
 1 &gt; Connection: Keep-Alive
@@ -927,17 +1048,17 @@ Successfully transferred $103 from account #54321 to account #15675
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:26:56.424 response time in milliseconds: 707
+16:04:43.343 response time in milliseconds: 465
 1 &lt; 400
-1 &lt; Date: Wed, 22 Oct 2025 02:26:56 GMT
+1 &lt; Date: Sun, 26 Oct 2025 21:04:42 GMT
 1 &lt; Content-Type: text/plain;charset=UTF-8
 1 &lt; Content-Length: 48
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 99258d7cda8b45f2-MIA
-Could not find account number 64685 and/or 74438
+1 &lt; CF-RAY: 994ce856b9787473-MIA
+Could not find account number 98275 and/or 31872
 
 </div>   
 
@@ -996,6 +1117,1752 @@ Could not find account number 64685 and/or 74438
   
 
      
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:35]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">parabank_transfer</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:35]</span>
+                <span class="scenario-name">Insufficient Funds</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>480</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:35]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_fromAccountId = &#39;12456&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_toAccountId = &#39;12345&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(1, 200)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_fromAccountId_error = fakerObj.number().randomNumber(5, true)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_toAccountId_error = fakerObj.number().randomNumber(5, true)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def high_amount = 9999999</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def negative_amount = -50</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;transfer&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param fromAccountId = val_fromAccountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param toAccountId = val_toAccountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = high_amount</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref passed">40</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">459</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.40">16:04:43.378 request:
+1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=9999999&amp;fromAccountId=12456&amp;toAccountId=12345
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+16:04:43.835 response time in milliseconds: 456
+1 &lt; 200
+1 &lt; Date: Sun, 26 Oct 2025 21:04:42 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 994ce859daa5fa48-MIA
+Successfully transferred $9999999 from account #12456 to account #12345
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.41">
+      <div class="step-ref passed">41</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.42">
+      <div class="step-ref passed">42</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == &quot;Successfully transferred $&quot;+ high_amount+&quot; from account #&quot;+val_fromAccountId+&quot; to account #&quot;+val_toAccountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.43">
+      <div class="step-ref passed">43</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;BUG DETECTED: The system allows transfers with insufficient funds, expected validation error&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.43">16:04:43.845 [print] BUG DETECTED: The system allows transfers with insufficient funds, expected validation error 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.44">
+      <div class="step-ref failed">44</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>karate.fail(&#39;BUG DETECTED: The system allows transfers with insufficient funds, expected validation error&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.44">16:04:43.847 classpath:org/udea/parabank/TransferFunds.feature:44
+* karate.fail(&#39;BUG DETECTED: The system allows transfers with insufficient funds, expected validation error&#39;)
+BUG DETECTED: The system allows transfers with insufficient funds, expected validation error
+classpath:org/udea/parabank/TransferFunds.feature:44
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:47]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">parabank_transfer</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:47]</span>
+                <span class="scenario-name">Negative Amount</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>378</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:47]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_fromAccountId = &#39;12456&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_toAccountId = &#39;12345&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(1, 200)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_fromAccountId_error = fakerObj.number().randomNumber(5, true)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_toAccountId_error = fakerObj.number().randomNumber(5, true)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def high_amount = 9999999</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def negative_amount = -50</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;transfer&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref passed">49</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param fromAccountId = val_fromAccountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param toAccountId = val_toAccountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = negative_amount</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">357</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.52">16:04:43.888 request:
+1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=-50&amp;fromAccountId=12456&amp;toAccountId=12345
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+16:04:44.241 response time in milliseconds: 352
+1 &lt; 200
+1 &lt; Date: Sun, 26 Oct 2025 21:04:43 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 994ce85d3b9a8b48-TPA
+Successfully transferred $-50 from account #12456 to account #12345
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == &quot;Successfully transferred $&quot;+ negative_amount+&quot; from account #&quot;+val_fromAccountId+&quot; to account #&quot;+val_toAccountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;BUG DETECTED: The system allows negative transfers, expected validation error&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.55">16:04:44.246 [print] BUG DETECTED: The system allows negative transfers, expected validation error 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref failed">56</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>karate.fail(&#39;BUG DETECTED: The system allows negative transfers, expected validation error&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.56">16:04:44.249 classpath:org/udea/parabank/TransferFunds.feature:56
+* karate.fail(&#39;BUG DETECTED: The system allows negative transfers, expected validation error&#39;)
+BUG DETECTED: The system allows negative transfers, expected validation error
+classpath:org/udea/parabank/TransferFunds.feature:56
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5:59]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">parabank_transfer</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5:59]</span>
+                <span class="scenario-name">Same Account Transfer</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>503</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5:59]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_fromAccountId = &#39;12456&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_toAccountId = &#39;12345&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(1, 200)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_fromAccountId_error = fakerObj.number().randomNumber(5, true)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_toAccountId_error = fakerObj.number().randomNumber(5, true)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def high_amount = 9999999</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def negative_amount = -50</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.60">
+      <div class="step-ref passed">60</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;transfer&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.61">
+      <div class="step-ref passed">61</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param fromAccountId = val_fromAccountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.62">
+      <div class="step-ref passed">62</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param toAccountId = val_fromAccountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.63">
+      <div class="step-ref passed">63</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = val_amount</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.64">
+      <div class="step-ref passed">64</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">485</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.64">16:04:44.285 request:
+1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=124&amp;fromAccountId=12456&amp;toAccountId=12456
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+16:04:44.765 response time in milliseconds: 480
+1 &lt; 200
+1 &lt; Date: Sun, 26 Oct 2025 21:04:43 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 994ce85f99ea7434-MIA
+Successfully transferred $124 from account #12456 to account #12456
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.65">
+      <div class="step-ref passed">65</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.66">
+      <div class="step-ref passed">66</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == &quot;Successfully transferred $&quot;+ val_amount+&quot; from account #&quot;+val_fromAccountId+&quot; to account #&quot;+val_fromAccountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.67">
+      <div class="step-ref passed">67</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;BUG DETECTED: The system allows transfers between the same account, expected validation error&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.67">16:04:44.771 [print] BUG DETECTED: The system allows transfers between the same account, expected validation error 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.68">
+      <div class="step-ref failed">68</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>karate.fail(&#39;BUG DETECTED: The system allows transfers between the same account, expected validation error&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.68">16:04:44.774 classpath:org/udea/parabank/TransferFunds.feature:68
+* karate.fail(&#39;BUG DETECTED: The system allows transfers between the same account, expected validation error&#39;)
+BUG DETECTED: The system allows transfers between the same account, expected validation error
+classpath:org/udea/parabank/TransferFunds.feature:68
+</div>   
 
   
 

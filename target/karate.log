@@ -640,3 +640,955 @@ Invalid username and/or password
 1 < CF-RAY: 994c50272e967445-MIA
 
 
+14:29:13.303 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:29:14.947 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=187&fromAccountId=54321&toAccountId=15675
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:29:15.714 [main] DEBUG com.intuit.karate - response time in milliseconds: 765
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:29:14 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c5c8159cd4089-MIA
+Successfully transferred $187 from account #54321 to account #15675
+
+14:29:15.755 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=196&fromAccountId=20586&toAccountId=87788
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:29:16.280 [main] DEBUG com.intuit.karate - response time in milliseconds: 525
+1 < 400
+1 < Date: Sun, 26 Oct 2025 19:29:15 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c5c84c98ec82c-TPA
+Could not find account number 20586 and/or 87788
+
+14:29:17.195 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:29:17.205 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:29:17.672 [main] DEBUG com.intuit.karate - response time in milliseconds: 467
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:29:16 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c5c8dafc6f3e0-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:29:17.703 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/invalidUserName/WrongPassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:29:18.033 [main] DEBUG com.intuit.karate - response time in milliseconds: 330
+1 < 400
+1 < Date: Sun, 26 Oct 2025 19:29:17 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c5c90dc64612e-MIA
+Invalid username and/or password
+
+14:29:18.050 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login//
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:29:18.512 [main] DEBUG com.intuit.karate - response time in milliseconds: 461
+1 < 404
+1 < Date: Sun, 26 Oct 2025 19:29:17 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < allow: POST,GET,OPTIONS,HEAD
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c5c92ef65dafd-MIA
+
+
+14:31:12.422 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:31:14.056 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:31:14.703 [main] DEBUG com.intuit.karate - response time in milliseconds: 644
+1 < 200
+1 < Date: Sun, 26 Oct 2025 19:31:13 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c5f68fc08a558-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+14:31:14.738 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:14
+And match responseTime < 5000
+no step-definition method match found for: match responseTime < 5000
+classpath:org/udea/parabank/login.feature:14
+14:31:14.767 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/invalidUserName/WrongPassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:31:15.280 [main] DEBUG com.intuit.karate - response time in milliseconds: 513
+1 < 400
+1 < Date: Sun, 26 Oct 2025 19:31:14 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c5f6c8eaccc74-TPA
+Invalid username and/or password
+
+14:31:15.284 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:38
+And match responseTime < 5000
+no step-definition method match found for: match responseTime < 5000
+classpath:org/udea/parabank/login.feature:38
+14:31:15.311 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login//
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:31:15.772 [main] DEBUG com.intuit.karate - response time in milliseconds: 461
+1 < 404
+1 < Date: Sun, 26 Oct 2025 19:31:14 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < allow: POST,GET,OPTIONS,HEAD
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994c5f6fcca42577-MIA
+
+
+14:31:15.774 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:47
+And match responseTime < 5000
+no step-definition method match found for: match responseTime < 5000
+classpath:org/udea/parabank/login.feature:47
+15:44:56.748 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:44:58.635 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=30&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:44:59.511 [main] DEBUG com.intuit.karate - response time in milliseconds: 872
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:44:58 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccb6fbaa3b249-MIA
+Successfully transferred $30 from account #12456 to account #12345
+
+15:44:59.567 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=123&fromAccountId=23467&toAccountId=61741
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:00.011 [main] DEBUG com.intuit.karate - response time in milliseconds: 444
+1 < 400
+1 < Date: Sun, 26 Oct 2025 20:44:58 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccb72fb9ee0f8-MIA
+Could not find account number 23467 and/or 61741
+
+15:45:00.049 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=9999999&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:00.535 [main] DEBUG com.intuit.karate - response time in milliseconds: 486
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:44:59 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccb762f73a677-MIA
+Successfully transferred $9999999 from account #12456 to account #12345
+
+15:45:00.542 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:42
+And match response == "Successfully transferred $"+ val_amount+" from account #"+val_fromAccountId+" to account #"+val_toAccountId
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Successfully transferred $9999999 from account #12456 to account #12345'
+  'Successfully transferred $79 from account #12456 to account #12345'
+
+classpath:org/udea/parabank/TransferFunds.feature:42
+15:45:00.595 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=-50&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:01.089 [main] DEBUG com.intuit.karate - response time in milliseconds: 493
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:45:00 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccb799cdb8b48-TPA
+Successfully transferred $-50 from account #12456 to account #12345
+
+15:45:01.091 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:52
+And match response == "Successfully transferred $"+ val_amount+" from account #"+val_fromAccountId+" to account #"+val_toAccountId
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Successfully transferred $-50 from account #12456 to account #12345'
+  'Successfully transferred $187 from account #12456 to account #12345'
+
+classpath:org/udea/parabank/TransferFunds.feature:52
+15:45:01.124 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=98&fromAccountId=12456&toAccountId=12456
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:01.430 [main] DEBUG com.intuit.karate - response time in milliseconds: 306
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:45:00 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccb7cce7dc717-MIA
+Successfully transferred $98 from account #12456 to account #12456
+
+15:45:01.433 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:62
+And match response == "Successfully transferred $"+ val_amount+" from account #"+val_fromAccountId+" to account #"+val_toAccountId
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Successfully transferred $98 from account #12456 to account #12456'
+  'Successfully transferred $98 from account #12456 to account #12345'
+
+classpath:org/udea/parabank/TransferFunds.feature:62
+15:45:02.467 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:45:02.478 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:02.942 [main] DEBUG com.intuit.karate - response time in milliseconds: 464
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:45:01 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccb8559a00d84-MIA
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+15:45:02.958 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/invalidUserName/WrongPassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:03.273 [main] DEBUG com.intuit.karate - response time in milliseconds: 314
+1 < 400
+1 < Date: Sun, 26 Oct 2025 20:45:02 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccb8849b3e55c-MIA
+Invalid username and/or password
+
+15:45:03.285 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login//
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:03.608 [main] DEBUG com.intuit.karate - response time in milliseconds: 322
+1 < 404
+1 < Date: Sun, 26 Oct 2025 20:45:02 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < allow: POST,GET,OPTIONS,HEAD
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccb8a6eb9c82c-TPA
+
+
+15:45:11.137 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:45:12.865 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=10&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:13.349 [main] DEBUG com.intuit.karate - response time in milliseconds: 479
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:45:12 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccbc71ee5a52d-MIA
+Successfully transferred $10 from account #12456 to account #12345
+
+15:45:13.423 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=73&fromAccountId=18831&toAccountId=54114
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:13.745 [main] DEBUG com.intuit.karate - response time in milliseconds: 321
+1 < 400
+1 < Date: Sun, 26 Oct 2025 20:45:12 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccbc9ca57c5de-MIA
+Could not find account number 18831 and/or 54114
+
+15:45:13.765 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=9999999&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:14.073 [main] DEBUG com.intuit.karate - response time in milliseconds: 306
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:45:13 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccbcbcb6bcccf-MIA
+Successfully transferred $9999999 from account #12456 to account #12345
+
+15:45:14.078 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:42
+And match response == "Successfully transferred $"+ val_amount+" from account #"+val_fromAccountId+" to account #"+val_toAccountId
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Successfully transferred $9999999 from account #12456 to account #12345'
+  'Successfully transferred $154 from account #12456 to account #12345'
+
+classpath:org/udea/parabank/TransferFunds.feature:42
+15:45:14.117 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=-50&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:14.451 [main] DEBUG com.intuit.karate - response time in milliseconds: 334
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:45:13 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccbce1b48cc7a-TPA
+Successfully transferred $-50 from account #12456 to account #12345
+
+15:45:14.454 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:52
+And match response == "Successfully transferred $"+ val_amount+" from account #"+val_fromAccountId+" to account #"+val_toAccountId
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Successfully transferred $-50 from account #12456 to account #12345'
+  'Successfully transferred $20 from account #12456 to account #12345'
+
+classpath:org/udea/parabank/TransferFunds.feature:52
+15:45:14.488 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=164&fromAccountId=12456&toAccountId=12456
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:45:14.816 [main] DEBUG com.intuit.karate - response time in milliseconds: 327
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:45:13 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ccbd059c68b47-TPA
+Successfully transferred $164 from account #12456 to account #12456
+
+15:45:14.819 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:62
+And match response == "Successfully transferred $"+ val_amount+" from account #"+val_fromAccountId+" to account #"+val_toAccountId
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Successfully transferred $164 from account #12456 to account #12456'
+  'Successfully transferred $164 from account #12456 to account #12345'
+
+classpath:org/udea/parabank/TransferFunds.feature:62
+15:48:47.748 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:48:49.449 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=165&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:48:49.947 [main] DEBUG com.intuit.karate - response time in milliseconds: 496
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:48:48 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994cd110ef2bd8bf-MIA
+Successfully transferred $165 from account #12456 to account #12345
+
+15:48:49.997 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=108&fromAccountId=37212&toAccountId=38032
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:48:50.464 [main] DEBUG com.intuit.karate - response time in milliseconds: 467
+1 < 400
+1 < Date: Sun, 26 Oct 2025 20:48:49 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994cd1135d56e55c-MIA
+Could not find account number 37212 and/or 38032
+
+15:48:50.495 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=9999999&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:48:50.983 [main] DEBUG com.intuit.karate - response time in milliseconds: 487
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:48:49 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994cd1167e2ccc7a-TPA
+Successfully transferred $9999999 from account #12456 to account #12345
+
+15:48:51.020 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=-50&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:48:51.478 [main] DEBUG com.intuit.karate - response time in milliseconds: 458
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:48:50 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994cd1199cf36d1f-MIA
+Successfully transferred $-50 from account #12456 to account #12345
+
+15:48:51.510 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=17&fromAccountId=12456&toAccountId=12456
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:48:51.822 [main] DEBUG com.intuit.karate - response time in milliseconds: 311
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:48:50 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994cd11cb9c5cc79-TPA
+Successfully transferred $17 from account #12456 to account #12456
+
+15:58:18.223 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:58:19.904 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=133&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:58:20.850 [main] DEBUG com.intuit.karate - response time in milliseconds: 944
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:58:19 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994cdf000831cc79-TPA
+Successfully transferred $133 from account #12456 to account #12345
+
+15:58:20.894 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=187&fromAccountId=64665&toAccountId=70865
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:58:21.358 [main] DEBUG com.intuit.karate - response time in milliseconds: 464
+1 < 400
+1 < Date: Sun, 26 Oct 2025 20:58:20 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994cdf03591a7525-MIA
+Could not find account number 64665 and/or 70865
+
+15:58:21.390 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=9999999&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:58:21.727 [main] DEBUG com.intuit.karate - response time in milliseconds: 337
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:58:20 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994cdf068e23cc74-TPA
+Successfully transferred $9999999 from account #12456 to account #12345
+
+15:58:21.758 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=-50&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:58:22.100 [main] DEBUG com.intuit.karate - response time in milliseconds: 340
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:58:21 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994cdf08dda2cc72-TPA
+Successfully transferred $-50 from account #12456 to account #12345
+
+15:58:22.112 [main] INFO  com.intuit.karate - [print] ⚠️ BUG DETECTED: The system allows negative transfers, expected validation error 
+15:58:22.140 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=187&fromAccountId=12456&toAccountId=12456
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:58:22.440 [main] DEBUG com.intuit.karate - response time in milliseconds: 300
+1 < 200
+1 < Date: Sun, 26 Oct 2025 20:58:21 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994cdf0b09fff4d0-MIA
+Successfully transferred $187 from account #12456 to account #12456
+
+16:01:49.105 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:01:50.876 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=5&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+16:01:51.502 [main] DEBUG com.intuit.karate - response time in milliseconds: 624
+1 < 200
+1 < Date: Sun, 26 Oct 2025 21:01:50 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ce424adb92594-MIA
+Successfully transferred $5 from account #12456 to account #12345
+
+16:01:51.548 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=12&fromAccountId=70241&toAccountId=72264
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+16:01:52.061 [main] DEBUG com.intuit.karate - response time in milliseconds: 513
+1 < 400
+1 < Date: Sun, 26 Oct 2025 21:01:50 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ce4281b6eefc7-TPA
+Could not find account number 70241 and/or 72264
+
+16:01:52.094 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=9999999&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+16:01:52.432 [main] DEBUG com.intuit.karate - response time in milliseconds: 338
+1 < 200
+1 < Date: Sun, 26 Oct 2025 21:01:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ce42b69ce0da2-TPA
+Successfully transferred $9999999 from account #12456 to account #12345
+
+16:01:52.466 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=-50&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+16:01:52.928 [main] DEBUG com.intuit.karate - response time in milliseconds: 461
+1 < 200
+1 < Date: Sun, 26 Oct 2025 21:01:51 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ce42dae407a26-MIA
+Successfully transferred $-50 from account #12456 to account #12345
+
+16:01:52.937 [main] INFO  com.intuit.karate - [print] ⚠️ BUG DETECTED: The system allows negative transfers, expected validation error 
+16:01:52.940 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:54
+* karate.fail('BUG DETECTED: The system allows negative transfers, expected validation error')
+BUG DETECTED: The system allows negative transfers, expected validation error
+classpath:org/udea/parabank/TransferFunds.feature:54
+16:01:52.969 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=23&fromAccountId=12456&toAccountId=12456
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+16:01:53.300 [main] DEBUG com.intuit.karate - response time in milliseconds: 331
+1 < 200
+1 < Date: Sun, 26 Oct 2025 21:01:52 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ce430d944cc74-TPA
+Successfully transferred $23 from account #12456 to account #12456
+
+16:04:40.304 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:04:41.992 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=171&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+16:04:42.810 [main] DEBUG com.intuit.karate - response time in milliseconds: 814
+1 < 200
+1 < Date: Sun, 26 Oct 2025 21:04:41 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ce85319980da2-TPA
+Successfully transferred $171 from account #12456 to account #12345
+
+16:04:42.878 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=125&fromAccountId=98275&toAccountId=31872
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+16:04:43.343 [main] DEBUG com.intuit.karate - response time in milliseconds: 465
+1 < 400
+1 < Date: Sun, 26 Oct 2025 21:04:42 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ce856b9787473-MIA
+Could not find account number 98275 and/or 31872
+
+16:04:43.378 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=9999999&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+16:04:43.835 [main] DEBUG com.intuit.karate - response time in milliseconds: 456
+1 < 200
+1 < Date: Sun, 26 Oct 2025 21:04:42 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ce859daa5fa48-MIA
+Successfully transferred $9999999 from account #12456 to account #12345
+
+16:04:43.843 [main] INFO  com.intuit.karate - [print] BUG DETECTED: The system allows transfers with insufficient funds, expected validation error 
+16:04:43.847 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:44
+* karate.fail('BUG DETECTED: The system allows transfers with insufficient funds, expected validation error')
+BUG DETECTED: The system allows transfers with insufficient funds, expected validation error
+classpath:org/udea/parabank/TransferFunds.feature:44
+16:04:43.888 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=-50&fromAccountId=12456&toAccountId=12345
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+16:04:44.240 [main] DEBUG com.intuit.karate - response time in milliseconds: 352
+1 < 200
+1 < Date: Sun, 26 Oct 2025 21:04:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ce85d3b9a8b48-TPA
+Successfully transferred $-50 from account #12456 to account #12345
+
+16:04:44.246 [main] INFO  com.intuit.karate - [print] BUG DETECTED: The system allows negative transfers, expected validation error 
+16:04:44.248 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:56
+* karate.fail('BUG DETECTED: The system allows negative transfers, expected validation error')
+BUG DETECTED: The system allows negative transfers, expected validation error
+classpath:org/udea/parabank/TransferFunds.feature:56
+16:04:44.284 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=124&fromAccountId=12456&toAccountId=12456
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_462)
+1 > Accept-Encoding: gzip,deflate
+
+
+16:04:44.765 [main] DEBUG com.intuit.karate - response time in milliseconds: 480
+1 < 200
+1 < Date: Sun, 26 Oct 2025 21:04:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 994ce85f99ea7434-MIA
+Successfully transferred $124 from account #12456 to account #12456
+
+16:04:44.771 [main] INFO  com.intuit.karate - [print] BUG DETECTED: The system allows transfers between the same account, expected validation error 
+16:04:44.773 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:68
+* karate.fail('BUG DETECTED: The system allows transfers between the same account, expected validation error')
+BUG DETECTED: The system allows transfers between the same account, expected validation error
+classpath:org/udea/parabank/TransferFunds.feature:68
