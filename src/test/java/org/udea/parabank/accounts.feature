@@ -1,4 +1,4 @@
-@parabank_login
+@parabank_transfer
 Feature: Get customer accounts
 
   Background:
