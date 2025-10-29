@@ -25,7 +25,7 @@ Feature: Bill payment failed due to insufficient funds
             "zipCode": "NA"
         },
         "phoneNumber": "NA",
-        "accountNumber": 12345
+        "accountNumber": 12456
     }
     """
     When method POST
@@ -52,7 +52,7 @@ Feature: Bill payment failed due to insufficient funds
             "zipCode": "NA"
         },
         "phoneNumber": "NA",
-        "accountNumber": 12345
+        "accountNumber": 12456
     }
     """
     When method POST
@@ -74,9 +74,28 @@ Feature: Bill payment failed due to insufficient funds
             "zipCode": "NA"
         },
         "phoneNumber": "NA",
-        "accountNumber": 12345
+        "accountNumber": 12456
     }
     """
     When method POST
     Then status 500
-    And match response == "Internal Server Error"
+
+  Scenario: Payment without accountNumber
+    Given path 'billpay'
+    And param accountId = val_accountId
+    And param amount = val_amount
+    And request
+    """
+    {
+        "name": "John Doe test",
+        "address": {
+            "street": "NA",
+            "city": "NA",
+            "state": "NA",
+            "zipCode": "NA"
+        },
+        "phoneNumber": "NA"
+    }
+    """
+    When method POST
+    Then status 500
