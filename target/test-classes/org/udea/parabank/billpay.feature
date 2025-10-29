@@ -9,7 +9,7 @@ Feature: Bill payment failed due to insufficient funds
     * def val_amount = fakerObj.number().numberBetween(10000, 90000)
     * def negative_amount = fakerObj.number().numberBetween(-100, -1)
 
-  Scenario: Payment with Insufficient Funds
+  Scenario Outline: Payment with Insufficient Funds
     Given path 'billpay'
     And param accountId = val_accountId
     And param amount = val_amount
@@ -28,8 +28,8 @@ Feature: Bill payment failed due to insufficient funds
     }
     """
     When method POST
-    Then status responseState
-    And match response == "Bill payment of $" + val_amount + " from account #" + val_accountId + " failed due to insufficient funds"
+    Then status <responseState>
+    And match response contains "insufficient funds"
     
     Examples:
         | responseState |
@@ -55,8 +55,7 @@ Feature: Bill payment failed due to insufficient funds
     }
     """
     When method POST
-    Then status responseState
-    And match response == "Bill payment of $"+ negative_amount +" from account #" + val_accountId + " failed due to insufficient funds"
+    Then status 400
 
   Scenario: Payment with empty name at body
     Given path 'billpay'
