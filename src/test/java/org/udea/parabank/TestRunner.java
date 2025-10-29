@@ -1,7 +1,5 @@
 package org.udea.parabank;
 
-import org.checkerframework.checker.units.qual.K;
-
 import com.intuit.karate.junit5.Karate;
 
 class TestRunner {

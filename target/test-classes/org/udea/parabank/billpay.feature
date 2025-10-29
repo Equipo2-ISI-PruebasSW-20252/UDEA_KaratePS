@@ -1,5 +1,4 @@
-    @parabank_billpay
-
+@parabank_billpay
 Feature: Bill payment failed due to insufficient funds
 
   Background:
@@ -8,7 +7,7 @@ Feature: Bill payment failed due to insufficient funds
     * def fakerObj = new faker()
     * def val_accountId = '12345'
     * def val_amount = fakerObj.number().numberBetween(10000, 90000)
-    * def negative_amount = fakerObj.number()numberBetween(-100, -1)
+    * def negative_amount = fakerObj.number().numberBetween(-100, -1)
 
   Scenario: Payment with Insufficient Funds
     Given path 'billpay'
