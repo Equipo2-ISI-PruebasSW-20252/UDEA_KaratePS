@@ -15,7 +15,7 @@ Feature: Loan request simulation
     And param customerId = val_customerId
     And param amount = val_amount
     And param downPayment = val_downPayment
-    And param fromAccount = val_fromAccountId
+    And param fromAccountId = val_fromAccountId
     When method POST
     Then status 200
     And match response.approved == true

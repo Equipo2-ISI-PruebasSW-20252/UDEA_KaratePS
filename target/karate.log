@@ -3170,3 +3170,4 @@ status code was: 200, expected: 500, response time in milliseconds: 301, url: ht
 {"payeeName":"John Doe test","amount":11712,"accountId":12345}
 classpath:org/udea/parabank/BillPay.feature:73
 19:54:21.617 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: org/udea/parabank/Loans.feature - mismatched input 'a' expecting <EOF>
+19:55:18.373 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: org/udea/parabank/Loans.feature - mismatched input 'a' expecting <EOF>
