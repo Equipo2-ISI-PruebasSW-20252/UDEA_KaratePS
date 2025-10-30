@@ -3072,3 +3072,101 @@ status code was: 500, expected: 400, response time in milliseconds: 1140, url: h
 </html>
 
 classpath:org/udea/parabank/billPay.feature:32
+19:44:32.853 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: org/udea/parabank/Loans.feature - mismatched input 'a' expecting <EOF>
+19:49:13.361 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:49:16.924 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=65815
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 131
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+{"name":"John Doe test","address":{"street":"NA","city":"NA","state":"NA","zipCode":"NA"},"phoneNumber":"NA","accountNumber":12456}
+
+19:49:17.747 [main] DEBUG com.intuit.karate - response time in milliseconds: 817
+1 < 200
+1 < Date: Thu, 30 Oct 2025 00:49:18 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9966e976ac76e8e4-MIA
+{"payeeName":"John Doe test","amount":65815,"accountId":12345}
+
+19:49:17.784 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/BillPay.feature:31
+Then match [400, 422] contains responseStatus
+match failed: CONTAINS
+  $ | actual does not contain expected | actual array does not contain expected item - 200 (LIST:NUMBER)
+  [400,422]
+  200
+
+    $[1] | not equal (NUMBER:NUMBER)
+    422
+    200
+
+    $[0] | not equal (NUMBER:NUMBER)
+    400
+    200
+
+classpath:org/udea/parabank/BillPay.feature:31
+19:49:17.836 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=-88
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 131
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+{"name":"John Doe test","address":{"street":"NA","city":"NA","state":"NA","zipCode":"NA"},"phoneNumber":"NA","accountNumber":12456}
+
+19:49:18.100 [main] DEBUG com.intuit.karate - response time in milliseconds: 264
+1 < 200
+1 < Date: Thu, 30 Oct 2025 00:49:18 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9966e97a4ff735b7-MIA
+{"payeeName":"John Doe test","amount":-88,"accountId":12345}
+
+19:49:18.102 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/BillPay.feature:53
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 264, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=-88, response: 
+{"payeeName":"John Doe test","amount":-88,"accountId":12345}
+classpath:org/udea/parabank/BillPay.feature:53
+19:49:18.123 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=11712
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 109
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+{"name":"John Doe test","address":{"street":"NA","city":"NA","state":"NA","zipCode":"NA"},"phoneNumber":"NA"}
+
+19:49:18.424 [main] DEBUG com.intuit.karate - response time in milliseconds: 301
+1 < 200
+1 < Date: Thu, 30 Oct 2025 00:49:18 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9966e97c4cd7e855-MIA
+{"payeeName":"John Doe test","amount":11712,"accountId":12345}
+
+19:49:18.428 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/BillPay.feature:73
+Then status 500
+status code was: 200, expected: 500, response time in milliseconds: 301, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=11712, response: 
+{"payeeName":"John Doe test","amount":11712,"accountId":12345}
+classpath:org/udea/parabank/BillPay.feature:73
+19:54:21.617 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: org/udea/parabank/Loans.feature - mismatched input 'a' expecting <EOF>
