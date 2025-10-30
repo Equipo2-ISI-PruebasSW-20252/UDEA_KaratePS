@@ -3171,3 +3171,1271 @@ status code was: 200, expected: 500, response time in milliseconds: 301, url: ht
 classpath:org/udea/parabank/BillPay.feature:73
 19:54:21.617 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: org/udea/parabank/Loans.feature - mismatched input 'a' expecting <EOF>
 19:55:18.373 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: org/udea/parabank/Loans.feature - mismatched input 'a' expecting <EOF>
+19:58:04.245 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: org/udea/parabank/Loans.feature - mismatched input 'a' expecting <EOF>
+19:58:21.799 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: org/udea/parabank/Loans.feature - mismatched input 'a' expecting <EOF>
+20:44:59.565 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: org/udea/parabank/Loans.feature - mismatched input '{' expecting <EOF>
+20:46:35.829 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:46:41.719 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=90&fromAccountId=13344&downPayment=48&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:46:42.758 [main] DEBUG com.intuit.karate - response time in milliseconds: 1034
+1 < 200
+1 < Date: Thu, 30 Oct 2025 01:46:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99673d921b02c3a9-MIA
+{"responseDate":1761788803157,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+20:46:42.906 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:21
+And match response.approved == true
+match failed: EQUALS
+  $ | not equal (BOOLEAN:BOOLEAN)
+  false
+  true
+
+classpath:org/udea/parabank/Loans.feature:21
+20:48:50.637 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:48:58.434 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=157&fromAccountId=13344&downPayment=54&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:48:59.441 [main] DEBUG com.intuit.karate - response time in milliseconds: 1001
+1 < 200
+1 < Date: Thu, 30 Oct 2025 01:48:59 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996740e85e019acf-MIA
+{"responseDate":1761788939831,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":13566}
+
+20:48:59.699 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/val_fromAccountId/transactions/amount/val_downPayment
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:49:00.142 [main] DEBUG com.intuit.karate - response time in milliseconds: 443
+1 < 404
+1 < Date: Thu, 30 Oct 2025 01:49:00 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996740ed5e4255ff-MIA
+
+
+20:49:00.147 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/verifyDebit.feature:11
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 443, url: https://parabank.parasoft.com/parabank/services/bank/accounts/val_fromAccountId/transactions/amount/val_downPayment, response: 
+
+classpath:org/udea/parabank/verifyDebit.feature:11
+20:49:00.150 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:25
+* def result = call read('verifyDebit.feature') { accountId: val_fromAccountId, loanAccountId: loan_accountId, amount: val_downPayment}
+status code was: 404, expected: 200, response time in milliseconds: 443, url: https://parabank.parasoft.com/parabank/services/bank/accounts/val_fromAccountId/transactions/amount/val_downPayment, response: 
+
+classpath:org/udea/parabank/verifyDebit.feature:11
+classpath:org/udea/parabank/Loans.feature:25
+20:51:36.637 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:51:42.202 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=114&fromAccountId=13344&downPayment=51&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:51:43.130 [main] DEBUG com.intuit.karate - response time in milliseconds: 923
+1 < 200
+1 < Date: Thu, 30 Oct 2025 01:51:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996744e73859b87d-MIA
+{"responseDate":1761789103520,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":14343}
+
+20:51:43.364 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/val_fromAccountId/transactions/amount/val_downPayment
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:51:43.842 [main] DEBUG com.intuit.karate - response time in milliseconds: 477
+1 < 404
+1 < Date: Thu, 30 Oct 2025 01:51:44 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996744ec5bf1ae1e-MIA
+
+
+20:51:43.845 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/verifyDebit.feature:11
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 477, url: https://parabank.parasoft.com/parabank/services/bank/accounts/val_fromAccountId/transactions/amount/val_downPayment, response: 
+
+classpath:org/udea/parabank/verifyDebit.feature:11
+20:51:43.847 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:25
+* def result = call read('verifyDebit.feature') { accountId: val_fromAccountId, loanAccountId: loan_accountId, amount: val_downPayment}
+status code was: 404, expected: 200, response time in milliseconds: 477, url: https://parabank.parasoft.com/parabank/services/bank/accounts/val_fromAccountId/transactions/amount/val_downPayment, response: 
+
+classpath:org/udea/parabank/verifyDebit.feature:11
+classpath:org/udea/parabank/Loans.feature:25
+20:53:05.389 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:53:12.936 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=30371
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 131
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+{"name":"John Doe test","address":{"street":"NA","city":"NA","state":"NA","zipCode":"NA"},"phoneNumber":"NA","accountNumber":12456}
+
+20:53:13.856 [main] DEBUG com.intuit.karate - response time in milliseconds: 913
+1 < 200
+1 < Date: Thu, 30 Oct 2025 01:53:14 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9967471eed061482-MIA
+{"payeeName":"John Doe test","amount":30371,"accountId":12345}
+
+20:53:13.913 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/BillPay.feature:31
+Then match [400, 422] contains responseStatus
+match failed: CONTAINS
+  $ | actual does not contain expected | actual array does not contain expected item - 200 (LIST:NUMBER)
+  [400,422]
+  200
+
+    $[1] | not equal (NUMBER:NUMBER)
+    422
+    200
+
+    $[0] | not equal (NUMBER:NUMBER)
+    400
+    200
+
+classpath:org/udea/parabank/BillPay.feature:31
+20:53:14.038 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=-45
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 131
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+{"name":"John Doe test","address":{"street":"NA","city":"NA","state":"NA","zipCode":"NA"},"phoneNumber":"NA","accountNumber":12456}
+
+20:53:14.359 [main] DEBUG com.intuit.karate - response time in milliseconds: 316
+1 < 200
+1 < Date: Thu, 30 Oct 2025 01:53:14 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996747232f05b1f4-MIA
+{"payeeName":"John Doe test","amount":-45,"accountId":12345}
+
+20:53:14.362 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/BillPay.feature:53
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 316, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=-45, response: 
+{"payeeName":"John Doe test","amount":-45,"accountId":12345}
+classpath:org/udea/parabank/BillPay.feature:53
+20:53:14.416 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=65972
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 109
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+{"name":"John Doe test","address":{"street":"NA","city":"NA","state":"NA","zipCode":"NA"},"phoneNumber":"NA"}
+
+20:53:14.911 [main] DEBUG com.intuit.karate - response time in milliseconds: 494
+1 < 200
+1 < Date: Thu, 30 Oct 2025 01:53:15 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996747259bca5c79-MIA
+{"payeeName":"John Doe test","amount":65972,"accountId":12345}
+
+20:53:14.912 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/BillPay.feature:73
+Then status 500
+status code was: 200, expected: 500, response time in milliseconds: 494, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=65972, response: 
+{"payeeName":"John Doe test","amount":65972,"accountId":12345}
+classpath:org/udea/parabank/BillPay.feature:73
+20:53:39.633 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:53:45.248 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=128&fromAccountId=13344&downPayment=66&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:53:46.273 [main] DEBUG com.intuit.karate - response time in milliseconds: 1013
+1 < 200
+1 < Date: Thu, 30 Oct 2025 01:53:46 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996747e9cfeb1b0d-MIA
+{"responseDate":1761789226631,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+20:53:46.689 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:21
+And match response.approved == true
+match failed: EQUALS
+  $ | not equal (BOOLEAN:BOOLEAN)
+  false
+  true
+
+classpath:org/udea/parabank/Loans.feature:21
+20:56:26.987 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:56:32.811 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=27&fromAccountId=13344&downPayment=7&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:56:33.810 [main] DEBUG com.intuit.karate - response time in milliseconds: 991
+1 < 200
+1 < Date: Thu, 30 Oct 2025 01:56:34 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99674c000b9ce9f4-MIA
+{"responseDate":1761789394203,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":13566}
+
+20:56:34.061 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/val_fromAccountId/transactions/amount/val_downPayment
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:56:34.508 [main] DEBUG com.intuit.karate - response time in milliseconds: 447
+1 < 404
+1 < Date: Thu, 30 Oct 2025 01:56:34 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99674c0528ccb18d-MIA
+
+
+20:56:34.511 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/verifyDebit.feature:11
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 447, url: https://parabank.parasoft.com/parabank/services/bank/accounts/val_fromAccountId/transactions/amount/val_downPayment, response: 
+
+classpath:org/udea/parabank/verifyDebit.feature:11
+20:56:34.512 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:25
+* def result = call read('verifyDebit.feature') { accountId: val_fromAccountId, loanAccountId: loan_accountId, amount: val_downPayment}
+status code was: 404, expected: 200, response time in milliseconds: 447, url: https://parabank.parasoft.com/parabank/services/bank/accounts/val_fromAccountId/transactions/amount/val_downPayment, response: 
+
+classpath:org/udea/parabank/verifyDebit.feature:11
+classpath:org/udea/parabank/Loans.feature:25
+21:01:32.253 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:01:37.743 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=26&fromAccountId=13344&downPayment=6&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:01:38.876 [main] DEBUG com.intuit.karate - response time in milliseconds: 1124
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:01:39 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996753727a390314-MIA
+{"responseDate":1761789699243,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":13677}
+
+21:01:39.215 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/13344/transactions/amount/6
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:01:39.695 [main] DEBUG com.intuit.karate - response time in milliseconds: 479
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:01:40 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996753789db8fdc9-MIA
+[{"id":14587,"accountId":13344,"type":"Debit","date":1761782400000,"amount":6.00,"description":"Down Payment for Loan # 13677"}]
+
+21:01:39.709 [main] INFO  com.intuit.karate - [print] HOLA 
+21:07:21.078 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:07:26.710 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=16&fromAccountId=13344&downPayment=6&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:07:27.723 [main] DEBUG com.intuit.karate - response time in milliseconds: 1007
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:07:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99675bf6daee9ab4-MIA
+{"responseDate":1761790048098,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":13788}
+
+21:07:27.988 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/13344/transactions/amount/6
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:07:28.447 [main] DEBUG com.intuit.karate - response time in milliseconds: 459
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:07:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99675bfc5d906e68-MIA
+[{"id":14587,"accountId":13344,"type":"Debit","date":1761782400000,"amount":6.00,"description":"Down Payment for Loan # 13677"},{"id":14698,"accountId":13344,"type":"Debit","date":1761782400000,"amount":6.00,"description":"Down Payment for Loan # 13788"}]
+
+21:07:28.456 [main] INFO  com.intuit.karate - [print] HOLA 
+21:07:28.524 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=23&fromAccountId=13344&downPayment=100000&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:07:28.984 [main] DEBUG com.intuit.karate - response time in milliseconds: 459
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:07:29 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99675bffa9fd5d6c-MIA
+{"responseDate":1761790049433,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:07:28.992 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:39
+And match response == "error.insufficient.funds.for.down.payment"
+match failed: EQUALS
+  $ | data types don't match (MAP:STRING)
+  {"responseDate":1761790049433,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+  'error.insufficient.funds.for.down.payment'
+
+classpath:org/udea/parabank/Loans.feature:39
+21:09:12.588 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:09:17.511 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=25&fromAccountId=13344&downPayment=5&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:09:18.428 [main] DEBUG com.intuit.karate - response time in milliseconds: 910
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:09:18 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99675eab2d455674-MIA
+{"responseDate":1761790158839,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":13899}
+
+21:09:18.720 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/13344/transactions/amount/5
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:09:19.030 [main] DEBUG com.intuit.karate - response time in milliseconds: 310
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:09:19 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99675eb05a1e55ca-MIA
+[{"id":14809,"accountId":13344,"type":"Debit","date":1761782400000,"amount":5.00,"description":"Down Payment for Loan # 13899"}]
+
+21:09:19.046 [main] INFO  com.intuit.karate - [print] HOLA 
+21:09:19.137 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=21&fromAccountId=13344&downPayment=100000&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:09:19.630 [main] DEBUG com.intuit.karate - response time in milliseconds: 492
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:09:20 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99675eb31b5bc141-MIA
+{"responseDate":1761790160068,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:19:36.235 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:19:42.257 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=12&fromAccountId=13344&downPayment=6&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:19:43.166 [main] DEBUG com.intuit.karate - response time in milliseconds: 904
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:19:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99676debd82878f6-MIA
+{"responseDate":1761790783591,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":13899}
+
+21:19:43.378 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/13344/transactions/amount/6
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:19:43.690 [main] DEBUG com.intuit.karate - response time in milliseconds: 310
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:19:44 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99676df08bb429d6-MIA
+[{"id":14698,"accountId":13344,"type":"Debit","date":1761782400000,"amount":6.00,"description":"Down Payment for Loan # 13899"}]
+
+21:19:43.760 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=24&fromAccountId=13344&downPayment=100000&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:19:44.102 [main] DEBUG com.intuit.karate - response time in milliseconds: 341
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:19:44 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99676df2fe1c13a9-MIA
+{"responseDate":1761790784558,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:19:44.138 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=-15&fromAccountId=13344&downPayment=6&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:19:44.603 [main] DEBUG com.intuit.karate - response time in milliseconds: 465
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:19:45 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99676df55ea41efb-MIA
+{"responseDate":1761790785060,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds","accountId":null}
+
+21:21:36.323 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:21:41.662 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=26&fromAccountId=13344&downPayment=6&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:21:42.530 [main] DEBUG com.intuit.karate - response time in milliseconds: 862
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:21:42 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996770d5dc18a4f4-MIA
+{"responseDate":1761790902947,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":14010}
+
+21:21:42.774 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/13344/transactions/amount/6
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:21:43.125 [main] DEBUG com.intuit.karate - response time in milliseconds: 350
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:21:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996770dafdff67e6-MIA
+[{"id":14698,"accountId":13344,"type":"Debit","date":1761782400000,"amount":6.00,"description":"Down Payment for Loan # 13899"},{"id":14809,"accountId":13344,"type":"Debit","date":1761782400000,"amount":6.00,"description":"Down Payment for Loan # 14010"}]
+
+21:21:43.186 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=17&fromAccountId=13344&downPayment=100000&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:21:43.646 [main] DEBUG com.intuit.karate - response time in milliseconds: 460
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:21:44 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996770dd5aaa3e91-MIA
+{"responseDate":1761790904104,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:21:43.669 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=-15&fromAccountId=13344&downPayment=9&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:21:44.123 [main] DEBUG com.intuit.karate - response time in milliseconds: 454
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:21:44 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996770e04a27cc25-MIA
+{"responseDate":1761790904570,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds","accountId":null}
+
+21:21:44.145 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=21&fromAccountId=13344&downPayment=-15&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:21:44.642 [main] DEBUG com.intuit.karate - response time in milliseconds: 497
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:21:45 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996770e36b5fa407-MIA
+{"responseDate":1761790905085,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":14121}
+
+21:21:44.645 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:61
+Then match response.approved == false
+match failed: EQUALS
+  $ | not equal (BOOLEAN:BOOLEAN)
+  true
+  false
+
+classpath:org/udea/parabank/Loans.feature:61
+21:28:45.602 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:28:51.114 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=28&fromAccountId=13344&downPayment=7&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:28:51.896 [main] DEBUG com.intuit.karate - response time in milliseconds: 779
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:28:52 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677b515d617525-MIA
+{"responseDate":1761791332342,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":14676}
+
+21:28:52.028 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/13344/transactions/amount/7
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:28:52.365 [main] DEBUG com.intuit.karate - response time in milliseconds: 336
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:28:52 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677b55cc7107ba-MIA
+[{"id":15031,"accountId":13344,"type":"Debit","date":1761782400000,"amount":7.00,"description":"Down Payment for Loan # 14676"}]
+
+21:28:52.418 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=14&fromAccountId=13344&downPayment=100000&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:28:52.883 [main] DEBUG com.intuit.karate - response time in milliseconds: 465
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:28:53 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677b581d99b356-MIA
+{"responseDate":1761791333346,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:28:52.906 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=-15&fromAccountId=13344&downPayment=8&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:28:53.245 [main] DEBUG com.intuit.karate - response time in milliseconds: 339
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:28:53 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677b5b3b834fce-MIA
+{"responseDate":1761791333695,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds","accountId":null}
+
+21:28:53.264 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=10&fromAccountId=13344&downPayment=-15&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:28:53.538 [main] DEBUG com.intuit.karate - response time in milliseconds: 274
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:28:54 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677b5d1a5edf2e-MIA
+{"responseDate":1761791333997,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":14787}
+
+21:28:53.539 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:59
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 274, url: https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=10&fromAccountId=13344&downPayment=-15&customerId=12212, response: 
+{"responseDate":1761791333997,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":14787}
+classpath:org/udea/parabank/Loans.feature:59
+21:28:53.567 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=18&fromAccountId=36435&downPayment=7&customerId=55555
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:28:53.880 [main] DEBUG com.intuit.karate - response time in milliseconds: 313
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:28:54 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677b5f3df63a12-MIA
+{"responseDate":1761791334337,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:28:53.882 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:70
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 313, url: https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=18&fromAccountId=36435&downPayment=7&customerId=55555, response: 
+{"responseDate":1761791334337,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+classpath:org/udea/parabank/Loans.feature:70
+21:29:51.307 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:29:56.996 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=26&fromAccountId=13344&downPayment=6&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:29:57.792 [main] DEBUG com.intuit.karate - response time in milliseconds: 788
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:29:58 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677cee5b2b1585-MIA
+{"responseDate":1761791398205,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":14898}
+
+21:29:58.053 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/13344/transactions/amount/6
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:29:58.503 [main] DEBUG com.intuit.karate - response time in milliseconds: 449
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:29:59 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677cf24dca9af2-MIA
+[{"id":14698,"accountId":13344,"type":"Debit","date":1761782400000,"amount":6.00,"description":"Down Payment for Loan # 13899"},{"id":14809,"accountId":13344,"type":"Debit","date":1761782400000,"amount":6.00,"description":"Down Payment for Loan # 14010"},{"id":15253,"accountId":13344,"type":"Debit","date":1761782400000,"amount":6.00,"description":"Down Payment for Loan # 14898"}]
+
+21:29:58.570 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=15&fromAccountId=13344&downPayment=100000&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:29:59.029 [main] DEBUG com.intuit.karate - response time in milliseconds: 459
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:29:59 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677cf58b496e24-MIA
+{"responseDate":1761791399487,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:29:59.056 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=-15&fromAccountId=13344&downPayment=8&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:29:59.410 [main] DEBUG com.intuit.karate - response time in milliseconds: 354
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:29:59 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677cf8b914a4cd-MIA
+{"responseDate":1761791399861,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds","accountId":null}
+
+21:29:59.432 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=14&fromAccountId=13344&downPayment=-15&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:29:59.744 [main] DEBUG com.intuit.karate - response time in milliseconds: 311
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:30:00 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677cfacbc29d81-MIA
+{"responseDate":1761791400192,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":15009}
+
+21:29:59.747 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:59
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 311, url: https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=14&fromAccountId=13344&downPayment=-15&customerId=12212, response: 
+{"responseDate":1761791400192,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":15009}
+classpath:org/udea/parabank/Loans.feature:59
+21:29:59.786 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=17&fromAccountId=13344&downPayment=5&customerId=54008
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:30:00.109 [main] DEBUG com.intuit.karate - response time in milliseconds: 322
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:30:00 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677cfd0f6fa67a-MIA
+{"responseDate":1761791400558,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:30:00.112 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:70
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 322, url: https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=17&fromAccountId=13344&downPayment=5&customerId=54008, response: 
+{"responseDate":1761791400558,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+classpath:org/udea/parabank/Loans.feature:70
+21:30:31.958 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:30:38.717 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=13&fromAccountId=13344&downPayment=7&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:30:39.387 [main] DEBUG com.intuit.karate - response time in milliseconds: 664
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:30:39 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677df248343f41-MIA
+{"responseDate":1761791439814,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":15120}
+
+21:30:39.582 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/13344/transactions/amount/7
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:30:40.051 [main] DEBUG com.intuit.karate - response time in milliseconds: 468
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:30:40 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677df5e93c48d8-MIA
+[{"id":15031,"accountId":13344,"type":"Debit","date":1761782400000,"amount":7.00,"description":"Down Payment for Loan # 14676"},{"id":15475,"accountId":13344,"type":"Debit","date":1761782400000,"amount":7.00,"description":"Down Payment for Loan # 15120"}]
+
+21:30:40.120 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=22&fromAccountId=13344&downPayment=100000&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:30:40.437 [main] DEBUG com.intuit.karate - response time in milliseconds: 317
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:30:40 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677df94c00b4c9-MIA
+{"responseDate":1761791440902,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:30:40.468 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=-15&fromAccountId=13344&downPayment=6&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:30:40.804 [main] DEBUG com.intuit.karate - response time in milliseconds: 335
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:30:41 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677dfb8d837224-MIA
+{"responseDate":1761791441267,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds","accountId":null}
+
+21:30:40.832 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=19&fromAccountId=13344&downPayment=-15&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:30:41.272 [main] DEBUG com.intuit.karate - response time in milliseconds: 440
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:30:41 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677dfd8850dd66-MIA
+{"responseDate":1761791441735,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":15231}
+
+21:30:41.275 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:59
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 440, url: https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=19&fromAccountId=13344&downPayment=-15&customerId=12212, response: 
+{"responseDate":1761791441735,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":15231}
+classpath:org/udea/parabank/Loans.feature:59
+21:30:41.319 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=18&fromAccountId=13344&downPayment=6&customerId=14127
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:30:41.629 [main] DEBUG com.intuit.karate - response time in milliseconds: 308
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:30:42 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99677e00a8e9b5bb-MIA
+{"responseDate":1761791442080,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:30:41.631 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:70
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 308, url: https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=18&fromAccountId=13344&downPayment=6&customerId=14127, response: 
+{"responseDate":1761791442080,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+classpath:org/udea/parabank/Loans.feature:70
+21:36:05.282 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:36:13.421 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=28&fromAccountId=13344&downPayment=5&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:36:14.292 [main] DEBUG com.intuit.karate - response time in milliseconds: 868
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:36:14 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9967861e6c7f9af5-MIA
+{"responseDate":1761791774725,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":15342}
+
+21:36:14.475 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/13344/transactions/amount/5
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:36:14.954 [main] DEBUG com.intuit.karate - response time in milliseconds: 479
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:36:15 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996786231b55ad73-MIA
+[{"id":15697,"accountId":13344,"type":"Debit","date":1761782400000,"amount":5.00,"description":"Down Payment for Loan # 15342"}]
+
+21:36:14.997 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=19&fromAccountId=13344&downPayment=100000&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:36:15.439 [main] DEBUG com.intuit.karate - response time in milliseconds: 441
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:36:15 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996786260851a69e-MIA
+{"responseDate":1761791775895,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:36:15.464 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=-15&fromAccountId=13344&downPayment=9&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:36:15.912 [main] DEBUG com.intuit.karate - response time in milliseconds: 448
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:36:16 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996786290cd32631-MIA
+{"responseDate":1761791776369,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds","accountId":null}
+
+21:36:15.932 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=15&fromAccountId=13344&downPayment=-15&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:36:16.258 [main] DEBUG com.intuit.karate - response time in milliseconds: 326
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:36:16 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9967862c1e15dfbd-MIA
+{"responseDate":1761791776714,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":15453}
+
+21:36:16.260 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:59
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 326, url: https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=15&fromAccountId=13344&downPayment=-15&customerId=12212, response: 
+{"responseDate":1761791776714,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":true,"accountId":15453}
+classpath:org/udea/parabank/Loans.feature:59
+21:36:16.286 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=16&fromAccountId=13344&downPayment=6&customerId=19991
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:36:16.629 [main] DEBUG com.intuit.karate - response time in milliseconds: 343
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:36:17 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9967862e690fda93-MIA
+{"responseDate":1761791777087,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+21:36:16.631 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/Loans.feature:70
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 343, url: https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=16&fromAccountId=13344&downPayment=6&customerId=19991, response: 
+{"responseDate":1761791777087,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+classpath:org/udea/parabank/Loans.feature:70
+21:36:16.654 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=12&fromAccountId=60650&downPayment=9&customerId=12212
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:36:17.070 [main] DEBUG com.intuit.karate - response time in milliseconds: 416
+1 < 400
+1 < Date: Thu, 30 Oct 2025 02:36:17 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 29
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99678630488ed061-MIA
+Could not find account #60650
+
