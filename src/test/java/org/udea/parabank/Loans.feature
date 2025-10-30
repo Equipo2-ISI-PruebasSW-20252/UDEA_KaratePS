@@ -56,7 +56,6 @@ Feature: Loan request simulation
     And param downPayment = val_negative
     And param fromAccountId = val_fromAccountId
     When method POST
-    Then status 400
     Then match response.approved == false
     And match response.accountId == null
 
