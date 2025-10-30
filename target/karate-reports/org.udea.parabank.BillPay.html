@@ -50,19 +50,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-10-29 08:53:14 PM</div>
+    <div>2025-10-29 09:37:33 PM</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item failed">
-            <a href="#[1:12]"><span>[1:12]</span> <span>Payment with Insufficient Funds</span></a>
+            <a href="#[1:14]"><span>[1:14]</span> <span>Payment with Insufficient Funds</span></a>
           </div>
           <div class="nav-item failed">
-            <a href="#[2:34]"><span>[2:34]</span> <span>Payment with negative funds</span></a>
+            <a href="#[2:36]"><span>[2:36]</span> <span>Payment with negative funds</span></a>
           </div>
           <div class="nav-item failed">
-            <a href="#[3:55]"><span>[3:55]</span> <span>Payment without accountNumber</span></a>
+            <a href="#[3:57]"><span>[3:57]</span> <span>Payment without accountNumber</span></a>
           </div>
         </div>
       </div>
@@ -76,85 +76,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:12]">
+          <div class="scenario-heading" id="[1:14]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:12]</span>
+                Scenario: <span>[1:14]</span>
                 <span class="scenario-name">Payment with Insufficient Funds</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>5046</span>
+              <span>ms:</span>&nbsp;<span>4396</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:12]bg">
+            <div class="step-container" id="[1:14]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:12]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url baseUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">5</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:12]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:12]bg"><div>
+          <div data-parent="[1:14]bg"><div>
   
 
   
@@ -164,119 +108,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">151</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:12]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref bg-step">8</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_accountId = &#39;12345&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:12]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.9">
-      <div class="step-ref bg-step">9</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(10000, 90000)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">32</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:12]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.10">
-      <div class="step-ref bg-step">10</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def negative_amount = fakerObj.number().numberBetween(-100, -1)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">7</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
+        <span>*</span>&nbsp;<span>url baseUrl</span>
       </div>
     </div>
     <div class="time-cell passed">2</div>
@@ -294,20 +126,132 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div><div>
+          <div data-parent="[1:14]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref passed">14</div>
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param accountId = val_accountId</span>
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:14]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">112</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:14]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_accountId = &#39;12345&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:14]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(10000, 90000)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">26</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:14]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def negative_amount = fakerObj.number().numberBetween(-100, -1)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
   </div>
 
    
@@ -332,10 +276,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param amount = val_amount</span>
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -360,15 +304,71 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">16</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request</span>
+        <span>And</span>&nbsp;<span>param accountId = val_accountId</span>
       </div>
     </div>
-    <div class="time-cell passed">189</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.16">{
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = val_amount</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">144</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.18">{
     &quot;name&quot;: &quot;John Doe test&quot;,
     &quot;address&quot;: {
         &quot;street&quot;: &quot;NA&quot;,
@@ -394,14 +394,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.30">
-      <div class="step-ref passed">30</div>
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">4605</div>
+    <div class="time-cell passed">4054</div>
   </div>
 
    
@@ -410,8 +410,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.30">20:53:12.937 request:
-1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amp;amount=30371
+  <div class="preformatted" data-parent="0.32">21:37:31.993 request:
+1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amp;amount=77982
 1 &gt; Accept: application/json
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 131
@@ -421,17 +421,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;name&quot;:&quot;John Doe test&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;NA&quot;,&quot;city&quot;:&quot;NA&quot;,&quot;state&quot;:&quot;NA&quot;,&quot;zipCode&quot;:&quot;NA&quot;},&quot;phoneNumber&quot;:&quot;NA&quot;,&quot;accountNumber&quot;:12456}
 
-20:53:13.856 response time in milliseconds: 913
+21:37:32.764 response time in milliseconds: 767
 1 &lt; 200
-1 &lt; Date: Thu, 30 Oct 2025 01:53:14 GMT
+1 &lt; Date: Thu, 30 Oct 2025 02:37:33 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9967471eed061482-MIA
-{&quot;payeeName&quot;:&quot;John Doe test&quot;,&quot;amount&quot;:30371,&quot;accountId&quot;:12345}
+1 &lt; CF-RAY: 99678809493dba37-MIA
+{&quot;payeeName&quot;:&quot;John Doe test&quot;,&quot;amount&quot;:77982,&quot;accountId&quot;:12345}
 
 </div>   
 
@@ -445,8 +445,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.31">
-      <div class="step-ref failed">31</div>
+    <div class="step-container" id="0.33">
+      <div class="step-ref failed">33</div>
       
       <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>match [400, 422] contains responseStatus</span>
@@ -461,7 +461,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.31">20:53:13.913 classpath:org/udea/parabank/BillPay.feature:31
+  <div class="preformatted" data-parent="0.33">21:37:32.816 classpath:org/udea/parabank/BillPay.feature:33
 Then match [400, 422] contains responseStatus
 match failed: CONTAINS
   $ | actual does not contain expected | actual array does not contain expected item - 200 (LIST:NUMBER)
@@ -476,7 +476,7 @@ match failed: CONTAINS
     400
     200
 
-classpath:org/udea/parabank/BillPay.feature:31
+classpath:org/udea/parabank/BillPay.feature:33
 </div>   
 
   
@@ -489,8 +489,8 @@ classpath:org/udea/parabank/BillPay.feature:31
   
 
   <div class="step-row">
-    <div class="step-container" id="0.32">
-      <div class="step-ref skipped">32</div>
+    <div class="step-container" id="0.34">
+      <div class="step-ref skipped">34</div>
       
       <div class="step-cell skipped">
         <span>And</span>&nbsp;<span>match response contains &quot;insufficient funds&quot;</span>
@@ -513,39 +513,67 @@ classpath:org/udea/parabank/BillPay.feature:31
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[2:34]">
+          <div class="scenario-heading" id="[2:36]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[2:34]</span>
+                Scenario: <span>[2:36]</span>
                 <span class="scenario-name">Payment with negative funds</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>362</span>
+              <span>ms:</span>&nbsp;<span>504</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[2:34]bg">
+            <div class="step-container" id="[2:36]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[2:34]bg"><div>
+          <div data-parent="[2:36]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:36]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -563,91 +591,7 @@ classpath:org/udea/parabank/BillPay.feature:31
 
 </div>
 </div>
-          <div data-parent="[2:34]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:34]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">13</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:34]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref bg-step">8</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_accountId = &#39;12345&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:34]bg"><div>
+          <div data-parent="[2:36]bg"><div>
   
 
   
@@ -657,7 +601,7 @@ classpath:org/udea/parabank/BillPay.feature:31
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(10000, 90000)</span>
+        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
       </div>
     </div>
     <div class="time-cell passed">5</div>
@@ -675,7 +619,7 @@ classpath:org/udea/parabank/BillPay.feature:31
 
 </div>
 </div>
-          <div data-parent="[2:34]bg"><div>
+          <div data-parent="[2:36]bg"><div>
   
 
   
@@ -685,66 +629,66 @@ classpath:org/udea/parabank/BillPay.feature:31
       <div class="step-ref bg-step">10</div>
       
       <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_accountId = &#39;12345&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:36]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(10000, 90000)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">9</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:36]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def negative_amount = fakerObj.number().numberBetween(-100, -1)</span>
       </div>
     </div>
-    <div class="time-cell passed">7</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.35">
-      <div class="step-ref passed">35</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.36">
-      <div class="step-ref passed">36</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param accountId = val_accountId</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -769,7 +713,7 @@ classpath:org/udea/parabank/BillPay.feature:31
       <div class="step-ref passed">37</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param amount = negative_amount</span>
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -797,15 +741,71 @@ classpath:org/udea/parabank/BillPay.feature:31
       <div class="step-ref passed">38</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request</span>
+        <span>And</span>&nbsp;<span>param accountId = val_accountId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.38">{
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = negative_amount</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref passed">40</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.40">{
     &quot;name&quot;: &quot;John Doe test&quot;,
     &quot;address&quot;: {
         &quot;street&quot;: &quot;NA&quot;,
@@ -831,14 +831,14 @@ classpath:org/udea/parabank/BillPay.feature:31
   
 
   <div class="step-row">
-    <div class="step-container" id="0.52">
-      <div class="step-ref passed">52</div>
+    <div class="step-container" id="0.54">
+      <div class="step-ref passed">54</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">327</div>
+    <div class="time-cell passed">475</div>
   </div>
 
    
@@ -847,8 +847,8 @@ classpath:org/udea/parabank/BillPay.feature:31
 
   
 
-  <div class="preformatted" data-parent="0.52">20:53:14.041 request:
-1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amp;amount=-45
+  <div class="preformatted" data-parent="0.54">21:37:32.914 request:
+1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amp;amount=-22
 1 &gt; Accept: application/json
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 131
@@ -858,17 +858,17 @@ classpath:org/udea/parabank/BillPay.feature:31
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;name&quot;:&quot;John Doe test&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;NA&quot;,&quot;city&quot;:&quot;NA&quot;,&quot;state&quot;:&quot;NA&quot;,&quot;zipCode&quot;:&quot;NA&quot;},&quot;phoneNumber&quot;:&quot;NA&quot;,&quot;accountNumber&quot;:12456}
 
-20:53:14.359 response time in milliseconds: 316
+21:37:33.383 response time in milliseconds: 469
 1 &lt; 200
-1 &lt; Date: Thu, 30 Oct 2025 01:53:14 GMT
+1 &lt; Date: Thu, 30 Oct 2025 02:37:33 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 996747232f05b1f4-MIA
-{&quot;payeeName&quot;:&quot;John Doe test&quot;,&quot;amount&quot;:-45,&quot;accountId&quot;:12345}
+1 &lt; CF-RAY: 9967880d5c124fad-MIA
+{&quot;payeeName&quot;:&quot;John Doe test&quot;,&quot;amount&quot;:-22,&quot;accountId&quot;:12345}
 
 </div>   
 
@@ -882,8 +882,8 @@ classpath:org/udea/parabank/BillPay.feature:31
   
 
   <div class="step-row">
-    <div class="step-container" id="0.53">
-      <div class="step-ref failed">53</div>
+    <div class="step-container" id="0.55">
+      <div class="step-ref failed">55</div>
       
       <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 400</span>
@@ -898,11 +898,11 @@ classpath:org/udea/parabank/BillPay.feature:31
 
   
 
-  <div class="preformatted" data-parent="0.53">20:53:14.362 classpath:org/udea/parabank/BillPay.feature:53
+  <div class="preformatted" data-parent="0.55">21:37:33.386 classpath:org/udea/parabank/BillPay.feature:55
 Then status 400
-status code was: 200, expected: 400, response time in milliseconds: 316, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amp;amount=-45, response: 
-{&quot;payeeName&quot;:&quot;John Doe test&quot;,&quot;amount&quot;:-45,&quot;accountId&quot;:12345}
-classpath:org/udea/parabank/BillPay.feature:53
+status code was: 200, expected: 400, response time in milliseconds: 469, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amp;amount=-22, response: 
+{&quot;payeeName&quot;:&quot;John Doe test&quot;,&quot;amount&quot;:-22,&quot;accountId&quot;:12345}
+classpath:org/udea/parabank/BillPay.feature:55
 </div>   
 
   
@@ -911,36 +911,36 @@ classpath:org/udea/parabank/BillPay.feature:53
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[3:55]">
+          <div class="scenario-heading" id="[3:57]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[3:55]</span>
+                Scenario: <span>[3:57]</span>
                 <span class="scenario-name">Payment without accountNumber</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>517</span>
+              <span>ms:</span>&nbsp;<span>433</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[3:55]bg">
+            <div class="step-container" id="[3:57]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[3:55]bg"><div>
+          <div data-parent="[3:57]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>url baseUrl</span>
@@ -961,63 +961,7 @@ classpath:org/udea/parabank/BillPay.feature:53
 
 </div>
 </div>
-          <div data-parent="[3:55]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:55]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">4</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:55]bg"><div>
+          <div data-parent="[3:57]bg"><div>
   
 
   
@@ -1027,10 +971,10 @@ classpath:org/udea/parabank/BillPay.feature:53
       <div class="step-ref bg-step">8</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_accountId = &#39;12345&#39;</span>
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1045,7 +989,7 @@ classpath:org/udea/parabank/BillPay.feature:53
 
 </div>
 </div>
-          <div data-parent="[3:55]bg"><div>
+          <div data-parent="[3:57]bg"><div>
   
 
   
@@ -1055,7 +999,7 @@ classpath:org/udea/parabank/BillPay.feature:53
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(10000, 90000)</span>
+        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
       </div>
     </div>
     <div class="time-cell passed">2</div>
@@ -1073,7 +1017,7 @@ classpath:org/udea/parabank/BillPay.feature:53
 
 </div>
 </div>
-          <div data-parent="[3:55]bg"><div>
+          <div data-parent="[3:57]bg"><div>
   
 
   
@@ -1083,35 +1027,7 @@ classpath:org/udea/parabank/BillPay.feature:53
       <div class="step-ref bg-step">10</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def negative_amount = fakerObj.number().numberBetween(-100, -1)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.56">
-      <div class="step-ref passed">56</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
+        <span>*</span>&nbsp;<span>def val_accountId = &#39;12345&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -1129,17 +1045,45 @@ classpath:org/udea/parabank/BillPay.feature:53
 
 </div>
 </div>
-          <div><div>
+          <div data-parent="[3:57]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.57">
-      <div class="step-ref passed">57</div>
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param accountId = val_accountId</span>
+        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(10000, 90000)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:57]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def negative_amount = fakerObj.number().numberBetween(-100, -1)</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -1167,10 +1111,10 @@ classpath:org/udea/parabank/BillPay.feature:53
       <div class="step-ref passed">58</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param amount = val_amount</span>
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1195,6 +1139,62 @@ classpath:org/udea/parabank/BillPay.feature:53
       <div class="step-ref passed">59</div>
       
       <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param accountId = val_accountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.60">
+      <div class="step-ref passed">60</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = val_amount</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.61">
+      <div class="step-ref passed">61</div>
+      
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
@@ -1203,7 +1203,7 @@ classpath:org/udea/parabank/BillPay.feature:53
 
    
   
-  <div class="preformatted" data-parent="0.59">{
+  <div class="preformatted" data-parent="0.61">{
     &quot;name&quot;: &quot;John Doe test&quot;,
     &quot;address&quot;: {
         &quot;street&quot;: &quot;NA&quot;,
@@ -1228,14 +1228,14 @@ classpath:org/udea/parabank/BillPay.feature:53
   
 
   <div class="step-row">
-    <div class="step-container" id="0.72">
-      <div class="step-ref passed">72</div>
+    <div class="step-container" id="0.74">
+      <div class="step-ref passed">74</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">501</div>
+    <div class="time-cell passed">425</div>
   </div>
 
    
@@ -1244,8 +1244,8 @@ classpath:org/udea/parabank/BillPay.feature:53
 
   
 
-  <div class="preformatted" data-parent="0.72">20:53:14.416 request:
-1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amp;amount=65972
+  <div class="preformatted" data-parent="0.74">21:37:33.415 request:
+1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amp;amount=77292
 1 &gt; Accept: application/json
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 109
@@ -1255,17 +1255,17 @@ classpath:org/udea/parabank/BillPay.feature:53
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;name&quot;:&quot;John Doe test&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;NA&quot;,&quot;city&quot;:&quot;NA&quot;,&quot;state&quot;:&quot;NA&quot;,&quot;zipCode&quot;:&quot;NA&quot;},&quot;phoneNumber&quot;:&quot;NA&quot;}
 
-20:53:14.911 response time in milliseconds: 494
+21:37:33.837 response time in milliseconds: 421
 1 &lt; 200
-1 &lt; Date: Thu, 30 Oct 2025 01:53:15 GMT
+1 &lt; Date: Thu, 30 Oct 2025 02:37:34 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 996747259bca5c79-MIA
-{&quot;payeeName&quot;:&quot;John Doe test&quot;,&quot;amount&quot;:65972,&quot;accountId&quot;:12345}
+1 &lt; CF-RAY: 996788102c1874c0-MIA
+{&quot;payeeName&quot;:&quot;John Doe test&quot;,&quot;amount&quot;:77292,&quot;accountId&quot;:12345}
 
 </div>   
 
@@ -1279,8 +1279,8 @@ classpath:org/udea/parabank/BillPay.feature:53
   
 
   <div class="step-row">
-    <div class="step-container" id="0.73">
-      <div class="step-ref failed">73</div>
+    <div class="step-container" id="0.75">
+      <div class="step-ref failed">75</div>
       
       <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 500</span>
@@ -1295,11 +1295,11 @@ classpath:org/udea/parabank/BillPay.feature:53
 
   
 
-  <div class="preformatted" data-parent="0.73">20:53:14.913 classpath:org/udea/parabank/BillPay.feature:73
+  <div class="preformatted" data-parent="0.75">21:37:33.838 classpath:org/udea/parabank/BillPay.feature:75
 Then status 500
-status code was: 200, expected: 500, response time in milliseconds: 494, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amp;amount=65972, response: 
-{&quot;payeeName&quot;:&quot;John Doe test&quot;,&quot;amount&quot;:65972,&quot;accountId&quot;:12345}
-classpath:org/udea/parabank/BillPay.feature:73
+status code was: 200, expected: 500, response time in milliseconds: 421, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amp;amount=77292, response: 
+{&quot;payeeName&quot;:&quot;John Doe test&quot;,&quot;amount&quot;:77292,&quot;accountId&quot;:12345}
+classpath:org/udea/parabank/BillPay.feature:75
 </div>   
 
   

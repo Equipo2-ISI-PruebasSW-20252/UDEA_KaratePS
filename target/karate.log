@@ -4439,3 +4439,99 @@ classpath:org/udea/parabank/Loans.feature:70
 1 < CF-RAY: 99678630488ed061-MIA
 Could not find account #60650
 
+21:37:25.323 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:37:31.992 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=77982
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 131
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+{"name":"John Doe test","address":{"street":"NA","city":"NA","state":"NA","zipCode":"NA"},"phoneNumber":"NA","accountNumber":12456}
+
+21:37:32.764 [main] DEBUG com.intuit.karate - response time in milliseconds: 767
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:37:33 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 99678809493dba37-MIA
+{"payeeName":"John Doe test","amount":77982,"accountId":12345}
+
+21:37:32.815 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/BillPay.feature:33
+Then match [400, 422] contains responseStatus
+match failed: CONTAINS
+  $ | actual does not contain expected | actual array does not contain expected item - 200 (LIST:NUMBER)
+  [400,422]
+  200
+
+    $[1] | not equal (NUMBER:NUMBER)
+    422
+    200
+
+    $[0] | not equal (NUMBER:NUMBER)
+    400
+    200
+
+classpath:org/udea/parabank/BillPay.feature:33
+21:37:32.913 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=-22
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 131
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+{"name":"John Doe test","address":{"street":"NA","city":"NA","state":"NA","zipCode":"NA"},"phoneNumber":"NA","accountNumber":12456}
+
+21:37:33.383 [main] DEBUG com.intuit.karate - response time in milliseconds: 469
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:37:33 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9967880d5c124fad-MIA
+{"payeeName":"John Doe test","amount":-22,"accountId":12345}
+
+21:37:33.385 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/BillPay.feature:55
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 469, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=-22, response: 
+{"payeeName":"John Doe test","amount":-22,"accountId":12345}
+classpath:org/udea/parabank/BillPay.feature:55
+21:37:33.415 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=77292
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 109
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_471)
+1 > Accept-Encoding: gzip,deflate
+{"name":"John Doe test","address":{"street":"NA","city":"NA","state":"NA","zipCode":"NA"},"phoneNumber":"NA"}
+
+21:37:33.836 [main] DEBUG com.intuit.karate - response time in milliseconds: 421
+1 < 200
+1 < Date: Thu, 30 Oct 2025 02:37:34 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 996788102c1874c0-MIA
+{"payeeName":"John Doe test","amount":77292,"accountId":12345}
+
+21:37:33.838 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/BillPay.feature:75
+Then status 500
+status code was: 200, expected: 500, response time in milliseconds: 421, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=77292, response: 
+{"payeeName":"John Doe test","amount":77292,"accountId":12345}
+classpath:org/udea/parabank/BillPay.feature:75
