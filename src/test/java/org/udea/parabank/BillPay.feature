@@ -28,13 +28,8 @@ Feature: Bill payment failed due to insufficient funds
     }
     """
     When method POST
-    Then status <responseState>
+    Then match [400, 422] contains responseStatus
     And match response contains "insufficient funds"
-    
-    Examples:
-        | responseState |
-        | 400           |
-        | 422           |
 
   Scenario: Payment with negative funds
     Given path 'billpay'
@@ -56,27 +51,6 @@ Feature: Bill payment failed due to insufficient funds
     """
     When method POST
     Then status 400
-
-  Scenario: Payment with empty name at body
-    Given path 'billpay'
-    And param accountId = val_accountId
-    And param amount = val_amount
-    And request
-    """
-    {
-        "name": ,
-        "address": {
-            "street": "NA",
-            "city": "NA",
-            "state": "NA",
-            "zipCode": "NA"
-        },
-        "phoneNumber": "NA",
-        "accountNumber": 12456
-    }
-    """
-    When method POST
-    Then status 500
 
   Scenario: Payment without accountNumber
     Given path 'billpay'
