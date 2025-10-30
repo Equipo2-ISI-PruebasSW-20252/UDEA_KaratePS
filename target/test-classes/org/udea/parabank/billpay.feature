@@ -9,7 +9,7 @@ Feature: Bill payment failed due to insufficient funds
     * def val_amount = fakerObj.number().numberBetween(10000, 90000)
     * def negative_amount = fakerObj.number().numberBetween(-100, -1)
 
-  Scenario Outline: Payment with Insufficient Funds
+  Scenario: Payment with Insufficient Funds
     Given path 'billpay'
     And param accountId = val_accountId
     And param amount = val_amount
