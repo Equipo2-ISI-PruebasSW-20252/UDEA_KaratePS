@@ -27,6 +27,8 @@ Feature: Login to Parabank
        "ssn": '#string'
     }
     """
+    * print responseHeaders
+    And match responseHeaders contains {'CF-RAY': '#present'}
 
   Scenario: Customer Login with invalid credentials
     Given path 'login'

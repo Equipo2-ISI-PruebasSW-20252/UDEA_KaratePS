@@ -1,4 +1,4 @@
-    @parabank_loans
+@parabank_loans
 Feature: Loan request simulation
 
   Background:
@@ -22,12 +22,11 @@ Feature: Loan request simulation
     When method POST
     Then status 200
     And match response.approved == true
-
     * def loan_accountId = response.accountId
-
     * def result = call read('verifyDebit.feature') { accountId: '#(val_fromAccountId)', loanAccountId: '#(loan_accountId)', amount: '#(val_downPayment)'}   
     * match result.responseStatus == 200
     * match result.response != null
+
   Scenario: Loan with unaffordable down Payment
     Given path 'requestLoan'
     And param customerId = val_customerId
@@ -68,6 +67,7 @@ Feature: Loan request simulation
     When method POST
     Then status 400
     And match response contains 'Could not find'
+
   Scenario: Loan with invalid fromAccountId
     Given path 'requestLoan'
     And param customerId = val_customerId
