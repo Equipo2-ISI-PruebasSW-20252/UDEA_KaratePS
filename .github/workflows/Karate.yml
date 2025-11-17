@@ -32,3 +32,13 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         with:
           report_paths: '**/surefire-reports/TEST-*.xml'
+
+      - name: Upload Test Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-reports
+          path: |
+            target/cucumber-html-reports/
+            target/surefire-reports/
+            target/karate-reports/
